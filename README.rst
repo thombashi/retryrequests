@@ -44,9 +44,20 @@ Usage
 
 Installation
 ============================================
+
+Install from PyPI
+------------------------------
 ::
 
     pip install retryrequests
+
+Install from PPA (for Ubuntu)
+------------------------------
+::
+
+    sudo add-apt-repository ppa:thombashi/ppa
+    sudo apt update
+    sudo apt install python3-retryrequests
 
 
 Dependencies
