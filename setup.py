@@ -53,10 +53,6 @@ setuptools.setup(
     },
     python_requires=">=3.5",
     install_requires=INSTALL_REQUIRES,
-    extras_require={
-        "build": ["twine", "wheel"],
-        "release": ["releasecmd>=0.0.18,<0.1.0"],
-    },
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Information Technology",
