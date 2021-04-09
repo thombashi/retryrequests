@@ -38,7 +38,8 @@ setuptools.setup(
     author=pkg_info["__author__"],
     author_email=pkg_info["__email__"],
     description=(
-        "A Python library for HTTP requests using requests package with exponential back-off retry."
+        "A Python library that make HTTP requests with exponential back-off retry "
+        "by using requests package."
     ),
     include_package_data=True,
     keywords=["requests", "retry"],
