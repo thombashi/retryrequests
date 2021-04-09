@@ -44,7 +44,7 @@ def put(url, data=None, **kwargs):
 
 
 def patch(url, data=None, **kwargs):
-    return make_requests_session().patch(data=data, **kwargs)
+    return make_requests_session().patch(url, data=data, **kwargs)
 
 
 def delete(url, **kwargs):
