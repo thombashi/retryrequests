@@ -4,30 +4,16 @@ PACKAGE := python_package_template
 .PHONY: build
 build:
 	@make clean
-	@python setup.py sdist bdist_wheel
-	@twine check dist/*
-	@python setup.py clean --all
+	@tox -e build
 	ls -lh dist/*
 
 .PHONY: clean
 clean:
-	@rm -rf $(PACKAGE)-*.*.*/ \
-		dist/ \
-		pip-wheel-metadata/ \
-		.eggs/ \
-		.pytest_cache/ \
-		.tox/ \
-		**/__pycache__/ \
-		**/*/__pycache__/ \
-		*.egg-info/
-	@python setup.py clean --all
-	@find . -not -path '*/\.*' -type f | grep -E .+\.py\.[a-z0-9]{32,}\.py$ | xargs -r rm
+	@tox -e clean
 
 .PHONY: fmt
 fmt:
-	@black $(CURDIR)
-	@autoflake --in-place --recursive --remove-all-unused-imports --exclude "__init__.py" .
-	@isort --apply --recursive
+	@tox -e fmt
 
 .PHONY: release
 release:
