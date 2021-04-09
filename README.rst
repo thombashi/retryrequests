@@ -5,7 +5,23 @@
 
 Summary
 ============================================
-A Python library for HTTP requests using requests package with exponential back-off retry.
+A Python library that make HTTP requests with exponential back-off retry by using `requests <https://docs.python-requests.org/en/master/>`__ package.
+
+.. image:: https://badge.fury.io/py/retryrequests.svg
+    :target: https://badge.fury.io/py/retryrequests
+    :alt: PyPI package version
+
+.. image:: https://img.shields.io/pypi/pyversions/retryrequests.svg
+    :target: https://pypi.org/project/retryrequests
+    :alt: Supported Python versions
+
+
+Installation
+============================================
+
+::
+
+    pip install retryrequests
 
 
 Usage
@@ -42,26 +58,8 @@ Usage
         }
 
 
-Installation
-============================================
-
-Install from PyPI
-------------------------------
-::
-
-    pip install retryrequests
-
-Install from PPA (for Ubuntu)
-------------------------------
-::
-
-    sudo add-apt-repository ppa:thombashi/ppa
-    sudo apt update
-    sudo apt install python3-retryrequests
-
-
 Dependencies
 ============================================
-Python 2.7+ or 3.5+
+Python 3.5+
 
 - `requests <http://python-requests.org/>`__
