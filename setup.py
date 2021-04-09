@@ -12,10 +12,6 @@ ENCODING = "utf8"
 pkg_info = {}
 
 
-def need_pytest():
-    return set(["pytest", "test", "ptr"]).intersection(sys.argv)
-
-
 def get_release_command_class():
     try:
         from releasecmd import ReleaseCommand
