@@ -40,7 +40,6 @@ with open(os.path.join(REQUIREMENT_DIR, "requirements.txt")) as f:
     INSTALL_REQUIRES = [line.strip() for line in f if line.strip()]
 
 SETUPTOOLS_REQUIRES = ["setuptools>=38.3.0"]
-PYTEST_RUNNER_REQUIRES = ["pytest-runner"] if need_pytest() else []
 
 cmdclass = get_release_command_class()
 
@@ -67,7 +66,7 @@ setuptools.setup(
 
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
     install_requires=SETUPTOOLS_REQUIRES + INSTALL_REQUIRES,
-    setup_requires=SETUPTOOLS_REQUIRES + PYTEST_RUNNER_REQUIRES,
+    setup_requires=SETUPTOOLS_REQUIRES,
     extras_require={
         "build": ["twine", "wheel"],
         "release": ["releasecmd>=0.0.18,<0.1.0"],
