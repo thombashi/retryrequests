@@ -20,3 +20,8 @@ fmt:
 release:
 	@python setup.py release --sign
 	@make clean
+
+.PHONY: setup
+setup:
+	@python3 -m pip install --upgrade -e .[test] releasecmd tox
+	python3 -m pip check
