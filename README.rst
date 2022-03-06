@@ -26,6 +26,7 @@ Installation
 
 Usage
 ============================================
+``retryrequests`` has same interface with ``requests``:
 
 :Sample Code:
     .. code-block:: python
